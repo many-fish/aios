@@ -1,0 +1,39 @@
+.item:hover,.sel{background:#F1F5FA;}
+
+.item{position:relative;}
+.item_icon{display:inline-block;background-size:100% 100%;cursor:pointer;vertical-align:middle;}
+.item_icon,.item_name,.item_size,.item_time,.item:hover img{display:inline-block;}
+
+.thumb .item{display:inline-block;width:120px;height:120px;margin-top:24px;margin-left:22px;border-radius:10px;text-align:center;}
+.thumb .item_name{width:90px;margin-top:20px;font-size:14px;}
+.thumb .item_icon{width:44px;height:52px;margin-top:24px;}
+.thumb .e_tick::before,.thumb .e_tick::after{background:#FFF;}
+.thumb .e_checkbox{display:none;top:4px;right:4px;width:20px;height:20px;border-radius:10px;background-color:#67ABE7;border:0;box-shadow:none;}
+.thumb .item:hover .e_checkbox{display:block;}
+.thumb .sel .e_checkbox{display:block;background-color:#208DE3;}
+.thumb .e_tick::before{left:5px;top:9px;}
+.thumb .e_tick::after{left:10px;top:4px;}
+.thumb .item_plus{display:none;}
+
+.list .item{height:37px;padding-top:5px;border-bottom:1px solid #DDD;}
+.list .e_checkbox{top:15px;}
+.list .item_icon{width:28px;height:28px;margin-left:10px;}
+.list .item_name{margin-left:24px;font-size:12px;vertical-align:middle;line-height:34px;}
+.list .item_plus{float:right;height:37px;margin-top:-5px;}
+
+img{display:none;vertical-align:middle;cursor:pointer;}
+img+img{margin-left:14px;}
+.item_size{width:60px;margin-left:30px;margin-right:80px;line-height:42px;text-align:center;}
+.item_time{width:110px;margin-right:40px;line-height:42px;}
+.item_size,.item_time{vertical-align:middle;font-size:12px;}
+
+.dir{background-image:url(../image/file/dir.svg);}
+.doc{background-image:url(../image/file/doc.svg);}
+.images{background-image:url(../image/file/images.svg);}
+.video{background-image:url(../image/file/video.svg);}
+.music{background-image:url(../image/file/music.svg);}
+.others{background-image:url(../image/file/others.svg);}
+.exe{background-image:url(../image/file/exe.svg);}
+.com{background-image:url(../image/file/com.svg);}
+
+.thumb .item_icon.dir{width:70px;height:50px;}

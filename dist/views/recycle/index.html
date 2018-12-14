@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<!-- Author: AIOS | QQ: 1070053575 -->
+<meta charset=UTF-8>
+<title>MuYun - Recycle</title>
+<meta name=viewport content='width=device-width,user-scalable=0,initial-scale=1.0'>
+<link rel=stylesheet href=../../contents/css/recycle.min.css>
+
+<div id=recycle class=body_core v-cloak v-on:contextmenu.prevent>
+  <a-head sel=file></a-head>
+  <a-side v-bind:info=user_info v-bind:list=ext_list v-bind:ext=ext v-bind:link=ExtLink></a-side>
+  <main class=pr>
+    <header class=mn_hd>
+      <div class=mn_hd_left>
+
+        <a class='mn_button' v-on:click.prevent=DelAll>全部删除</a>
+
+        <a class='mn_button' v-on:click.prevent=ReCoverAll>全部还原</a>
+        
+        <template v-if=index.length>
+          <a class='mn_button' v-on:click.prevent=ReCoverFile>还原</a>
+          <a class='mn_button type_del' v-on:click.prevent=DelFile>删除</a>
+        </template>
+
+      </div>
+      <div class='mn_hd_right pa'>
+        <div class=mn_count>
+          <span>文件/文件夹 {{dir.length}}</span>
+        </div>
+      </div>
+    </header>
+    
+    <div class='pr e_hd list'>
+      <div class=e_checkbox v-bind:class='{e_tick:isAll}' v-on:click=SelAll></div>
+      <span class=e_hd_name v-on:click='Sort("name")'>文件名</span>
+      <div class=e_hd_plus>
+        <span class=e_hd_size v-on:click='Sort("size")'>文件大小</span>
+        <span class=e_hd_time v-on:click='Sort("time")'>删除时间</span>
+      </div>
+    </div>
+
+    <ul class='pa explorer list' v-on:contextmenu.prevent.stop=ShowMenu v-on:click=Reset>
+      <li class=e_none v-if=!dir.length>
+        <div>
+          <img alt='没有文件哦' src=../../contents/image/file_none.svg><br>
+          <span>这里没有文件哦</span>
+        </div>
+      </li>
+      <a-item v-for='(item,index) in dir' v-bind:item=item v-bind:index=index v-bind:click=FileClick v-bind:menu=ShowMenu></a-item>
+    </ul>
+  </main>
+
+  <a-menu v-bind:list=context_dir v-bind:fixed=fixed_dir></a-menu>
+  <a-menu v-bind:list=context_file v-bind:fixed=fixed_file v-bind:target=menu_target></a-menu>
+
+  <a-alert v-bind:config=alert_config v-on:close=CloseAlert></a-alert>
+  <a-tips v-if=tips_config v-bind:uuid=tips_uuid v-bind:config=tips_config v-on:close=CloseTips></a-tips>
+</div>
+
+<script src=../../contents/js/vue.min.js></script>
+<script src=../../contents/js/recycle.min.js></script>

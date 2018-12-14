@@ -1,0 +1,13 @@
+.mn_hd{height:72px;padding-top:8px;}
+.mn_hd_left{margin-left:32px;}
+
+label.mn_button{cursor:pointer;}
+.mn_button{display:inline-block;width:80px;height:28px;border:2px solid #0078D7;color:#0078D7;font:14px/2 '微软雅黑';vertical-align:middle;text-align:center;margin-right:20px;border-radius:10px;}
+.mn_button:hover{color:#0078D7;}
+
+.type_del{border:2px solid #F00;color:#F00;}
+.type_del:hover{color:#F00;}
+
+.mn_hd_right{right:40px;top:8px;text-align:right;}
+
+.mn_count{font:14px/32px '微软雅黑';color:#999;margin-top:8px;}

@@ -1,0 +1,57 @@
+{
+    "Code": 1,
+    "Info": "Succeed",
+    "Msg": "",
+    "Data": [
+        {
+            "PathName": "木木的文件夹",
+            "VirName": "1DA6C5DDE64707F8285F540A538DB815",
+            "ParentPath": "/",
+            "Children": []
+        },
+        {
+            "PathName": "木木的照片",
+            "VirName": "2B99819A124980E0F81E11F08F6C9844",
+            "ParentPath": "/",
+            "Children": [
+                {
+                    "PathName": "Cosplay",
+                    "VirName": "5552267A1249se3467fhE11F0886drr67",
+                    "ParentPath": "2B99819A124980E0F81E11F08F6C9844",
+                    "Children": []
+                },
+                {
+                    "PathName": "Daily",
+                    "VirName": "FAE393EA04F1A1B0219F1F25A8388D60",
+                    "ParentPath": "2B99819A124980E0F81E11F08F6C9844",
+                    "Children": []
+                }
+            ]
+        },
+        {
+            "PathName": "佳佳",
+            "VirName": "30436B7FE1B02832803B91247D822EBA",
+            "ParentPath": "/",
+            "Children": [
+                {
+                    "PathName": "新建文件夹",
+                    "VirName": "091FE1596F6E022BF98B6EF2695A9C43",
+                    "ParentPath": "30436B7FE1B02832803B91247D822EBA",
+                    "Children": []
+                }
+            ]
+        },
+        {
+            "PathName": "测试上传文件夹",
+            "VirName": "B215BB22EFE66D4C653DD048F71CF6DF",
+            "ParentPath": "/",
+            "Children": []
+        },
+        {
+            "PathName": "测试文件夹",
+            "VirName": "33EED99941B6A751598513E76141DC0B",
+            "ParentPath": "/",
+            "Children": []
+        }
+    ]
+}

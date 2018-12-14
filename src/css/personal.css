@@ -1,0 +1,41 @@
+.mn_self,.mn_secure{width:500px;left:50%;top:50%;transform:translate(-50%,-50%);}
+
+label,span{font-size:14px;}
+
+.mn_self tr:first-child td{padding:15px 0;}
+.mn_self tr,.mn_self tr:first-child input{height:70px;}
+.mn_self tr:first-child [disabled],.mn_self td:last-child{width:264px;}
+.mn_self tr:first-child input,.mn_self tr:first-child span{font:30px '微软雅黑';}
+.mn_self tr:not(:first-child):not(:last-child){border-top:1px solid #DDD;border-bottom:1px solid #DDD;}
+.mn_self td:first-child:not(:only-child){width:206px;padding-right:30px;text-align:right;}
+.mn_self td:only-child{width:500px;}
+.mn_self td:only-child span{line-height:70px;}
+.mn_self td{white-space:nowrap;}
+
+.mn_img{float:right;width:70px;height:70px;border-radius:50%;overflow:hidden;cursor:pointer;}
+.head_img{float:right;border-radius:35px;background:#C0C0C0;}
+.head_holder{float:right;width:70px;height:25px;margin-top:-25px;background:rgba(175,175,175,0.4);font:12px '微软雅黑';color:#FFF;}
+
+.self_text+.close{right:35px;top:5px;}
+.close::before,.close::after{background:#C03;}
+.self_text{max-width:264px;width:198px;height:23px;text-indent:10px;font-size:14px;vertical-align:middle;}
+.self_text[disabled]{background:none;border:0;text-indent:0;}
+.self_text:focus{border:2px solid #69C;}
+
+[type=radio]{display:none;}
+.mn_radio{margin-right:45px;cursor:pointer;}
+.mn_radio::before{content:'';display:inline-block;width:8px;height:8px;margin-right:10px;border-radius:5px;border:1px solid #626262;}
+.mn_radio.sel::before{background:#626262;}
+
+.mn_self select{border:0}
+.mn_live select{min-width:58px;}
+
+.mn_progress{position:relative;}
+.mn_progress div{height:6px;margin-top:3px;border-radius:6px;background:#0078D7;transition:width 1s;}
+.mn_progress div::after{content:'';position:absolute;z-index:-1;width:200px;height:6px;border-radius:6px;background:#DCDCDC;}
+.mn_progress span{position:absolute;right:20px;margin-top:-12px;}
+
+.mn_button{text-align:center;}
+.mn_button button{width:45px;height:45px;border-radius:50%;background:#DCDCDC;border:0;}
+
+.mn_secure .item:first-child{border-top:1px solid #999;}

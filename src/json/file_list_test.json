@@ -1,0 +1,112 @@
+[
+    {
+        "FileName": "新建文件夹",
+        "VirName": "B",
+        "CreateTime": "2016-11-08 00:00:00",
+        "DeleteTime": "2016-11-08 00:00:00",
+        "FileSize": "",
+        "FileExt": "",
+        "ParentPath": "/",
+        "FileType": "dir"
+    },
+    {
+        "FileName": "A文件夹",
+		"VirName": "A",
+        "CreateTime": "2016-11-22 00:37:39",
+        "DeleteTime": "2016-11-08 00:00:00",
+        "FileSize": "",
+        "FileExt": "",
+        "ParentPath": "/",
+        "FileType": "dir"
+    },
+    {
+        "FileName": "新建文件夹(3)",
+        "VirName": "A",
+        "CreateTime": "2016-11-22 00:37:39",
+        "DeleteTime": "2016-11-08 00:00:00",
+        "FileSize": "",
+        "FileExt": "",
+        "ParentPath": "/",
+        "FileType": "dir"
+    },
+    {
+        "FileName": "C文件夹",
+		"VirName": "C",
+	    "CreateTime": "2016-11-08 00:00:00",
+        "DeleteTime": "2016-11-08 00:00:00",
+	    "FileSize": "",
+	    "FileExt": "",
+	    "ParentPath": "/",
+	    "FileType": "dir"
+	},
+    {
+        "FileName": "C文件.exe",
+        "VirName": "B-",
+        "CreateTime": "2016-11-08 00:00:00",
+        "DeleteTime": "2016-11-08 00:00:00",
+        "FileSize": "1235",
+        "FileExt": "others",
+        "ParentPath": "/",
+        "FileType": "file"
+    },
+	{
+	    "FileName": "A文件.mp3",
+		"VirName": "A-",
+		"CreateTime": "2016-11-09 00:00:00",
+        "DeleteTime": "2016-11-08 00:00:00",
+		"FileSize": "5",
+		"FileExt": "music",
+		"ParentPath": "/",
+		"FileType": "file"
+	},
+    {
+        "FileName": "B文件.avi",
+		"VirName": "B-",
+        "CreateTime": "2016-11-20 00:00:00",
+        "DeleteTime": "2016-11-08 00:00:00",
+        "FileSize": "50000",
+        "FileExt": "video",
+        "ParentPath": "/",
+        "FileType": "file"
+    },
+    {
+        "FileName": "D文件.doc",
+        "VirName": "B-",
+        "CreateTime": "2016-11-08 00:00:00",
+        "DeleteTime": "2016-11-08 00:00:00",
+        "FileSize": "1235",
+        "FileExt": "doc",
+        "ParentPath": "/",
+        "FileType": "file"
+    },
+    {
+        "FileName": "K文件.jpg",
+        "VirName": "B-",
+        "CreateTime": "2016-11-08 00:00:00",
+        "DeleteTime": "2016-11-08 00:00:00",
+        "FileSize": "1235",
+        "FileExt": "images",
+        "ParentPath": "/",
+        "FileType": "file"
+    },
+    {
+        "FileName": "Z文件.zip",
+        "VirName": "B-",
+        "CreateTime": "2016-11-08 00:00:00",
+        "DeleteTime": "2016-11-08 00:00:00",
+        "FileSize": "1235",
+        "FileExt": "com",
+        "ParentPath": "/",
+        "FileType": "file"
+    },
+    {
+        "FileName": "E文件.exe",
+        "VirName": "B-",
+        "CreateTime": "2016-11-08 00:00:00",
+        "DeleteTime": "2016-11-08 00:00:00",
+        "FileSize": "1235",
+        "FileExt": "exe",
+        "ParentPath": "/",
+        "FileType": "file"
+    }
+]

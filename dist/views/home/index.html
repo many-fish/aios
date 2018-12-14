@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<!-- Author: AIOS | QQ: 1070053575 -->
+<meta charset=UTF-8>
+<title>MuYun - Home</title>
+<meta name=viewport content='width=device-width,user-scalable=0,initial-scale=1.0'>
+<link rel=stylesheet href=../../contents/css/home.min.css>
+
+<div id=home class=body_core v-cloak v-on:contextmenu.prevent>
+  <a-head sel=file></a-head>
+  <a-side v-bind:info=user_info v-bind:list=ext_list v-bind:ext=ext v-bind:link=ExtLink></a-side>
+  <main class=pr>
+  	<header class=mn_hd>
+  		<div class=mn_hd_left>
+
+  			<label for=upload class='mn_button type_file'>
+  				<div class=mn_button_img>
+  					<i></i>
+  				</div>
+  				<span>上传</span>
+  			</label>
+  			<form style='display:none;'>
+  				<input type=file id=upload multiple v-on:change=Upload>
+  			</form>
+
+  			<a class='mn_button type_new' v-show='ext == "all"' v-on:click.prevent=NewDir>
+  				<div class=mn_button_img>
+  					<i></i>
+  				</div>
+  				<span>新建文件夹</span>
+  			</a>
+  			
+  			<div class=mn_hd_menu v-show=index.length>
+  				<a class='mn_button type_down' v-on:click.prevent=Download>下载</a>
+  				<a class='mn_button type_rename' v-on:click.prevent=ReName>重命名</a>
+  				<a class='mn_button type_copy' v-on:click.prevent=CopyTo>复制到</a>
+  				<a class='mn_button type_move' v-on:click.prevent=MoveTo>移动到</a>
+  				<a class='mn_button type_more'>更多...</a>
+  				<a class='mn_button type_del' v-on:click.prevent=DelFile>删除</a>
+  			</div>
+
+  			<nav class=mn_trail>
+  				<a class='mn_trail_back vm' v-show='trail[1] && ext' v-on:click.prevent=GoBack>返回上一级</a>
+  				<a class='mn_trail_search vm' v-show=!ext>搜索结果：</a>
+  				<span v-for='(item,index) in trail'>
+  					<span class='mn_trail_gt vm f14' v-if=index>&gt;</span>
+  					<a class='ellipsis vm' v-bind:title=item.name v-on:click.prevent=TrailLink(index)>{{item.name}}</a>
+  				</span>
+  			</nav>
+
+  		</div>
+  		<div class='mn_hd_right pa'>
+
+  			<div class=mn_hd_handle>
+  				<label for=search class=mn_search_label title='开始搜索' v-on:click=Search></label>
+  				<input id=search placeholder='请输入关键字' v-model.trim=search_text v-bind:style='{width:search_text?"150px":""}' v-on:change=Search>
+  			</div>
+
+  			<div class='pr mn_hd_handle mn_upload' v-on:click.stop='upload_show = !upload_show'>
+  				<a-load ref=upload v-bind:wait=upload_list v-show=upload_show v-on:complete=ReLoad></a-load>
+  			</div>
+  			<div class='mn_hd_handle mn_mode' v-bind:class='"type_"+mode' v-on:click=Toggle></div>
+
+  			<div class=mn_count>
+  				<span>文件/文件夹 {{dir.length}}</span>
+  			</div>
+  		</div>
+  	</header>
+  	
+  	<div class='pr e_hd' v-bind:class=mode>
+  		<span class=e_all v-on:click=SelAll v-if='mode=="thumb"'>
+        <div class=e_checkbox v-bind:class='{e_tick:isAll}'></div>
+        <span>全选</span>
+      </span>
+  		<div class=e_checkbox v-bind:class='{e_tick:isAll}' v-on:click=SelAll v-else></div>
+  		<span class=e_hd_name v-on:click='Sort("name")'>文件名</span>
+  		<div class=e_hd_plus>
+  			<span class=e_hd_size v-on:click='Sort("size")'>文件大小</span>
+  			<span class=e_hd_time v-on:click='Sort("time")'>创建时间</span>
+  		</div>
+  	</div>
+
+  	<ul class='pa explorer' v-bind:class=mode v-on:contextmenu.prevent.stop=ShowMenu v-on:click=Reset>
+  		<li class=e_none v-if=!dir.length>
+  			<div>
+  				<img alt='没有文件哦' src=../../contents/image/file_none.svg v-if=ext>
+  				<img alt='没有文件哦' src=../../contents/image/search_none.svg v-else><br>
+  				<span>{{ext?'这里没有文件哦':'找不到文件耶~'}}</span>
+  			</div>
+  		</li>
+  		<a-item v-for='(item,index) in dir' v-bind:item=item v-bind:index=index v-bind:click=FileClick v-bind:down=Download v-bind:menu=ShowMenu></a-item>
+  	</ul>
+  </main>
+
+	<a-menu v-bind:list=context_dir v-bind:fixed=fixed_dir></a-menu>
+	<a-menu v-bind:list=context_file v-bind:fixed=fixed_file v-bind:target=menu_target></a-menu>
+
+	<a-tree v-bind:tree=file_tree v-on:complete=SubmitTree v-on:close=ResetTree></a-tree>
+
+  <a-alert v-if=alert_config v-bind:config=alert_config v-on:close=CloseAlert></a-alert>
+  <a-tips v-if=tips_config v-bind:uuid=tips_uuid v-bind:config=tips_config v-on:close='tips_config=""'></a-tips>
+</div>
+
+<script src=../../contents/js/vue.min.js></script>
+<script src=../../contents/js/home.min.js></script>
